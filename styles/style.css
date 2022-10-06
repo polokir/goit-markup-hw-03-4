@@ -134,7 +134,7 @@ button{
     width: 16px;
     height: 12px;
     margin-right: 10px;
-    fill: var(--contact-color);
+    fill: currentColor;
 }
 
 .phone{
@@ -149,12 +149,6 @@ button{
 .contact-link:focus{
     color: var(--hover-color);
 }
-
-.header-contact-info .contact-link:hover > .list-icon,
-.header-contact-info .contact-link:focus > .list-icon{
-    fill:var(--hover-color) ;
-}
-
 
 .current{
     color: var(--hover-color);
@@ -172,7 +166,10 @@ button{
     ),url(../img/Imghero-picture.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1600px ;
+    background-size: cover;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
      
 } 
 
@@ -242,16 +239,16 @@ button{
 
 .icon-about-container{
     width: 270px;
-    padding: 25px 0;
     height: 120px;
     background-color: var(--our-team-color);
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .about-icon{
-    display: flex;
     width: 70px;
     height: 70px;
-    margin: 0 auto;
 }
 
 .about-text{
@@ -357,13 +354,10 @@ button{
 .social-link:hover,
 .social-link:focus
 {
-   
    background-color: var(--hover-color); 
+   color:var(--second-font-color)
 }
-.team-social-list .social-link:hover > .team-social-icon,
-.team-social-list .social-link:focus > .team-social-icon{
-    fill: var(--second-font-color);
-}
+
 
 footer{
     background-color: var(--hero-bg);
@@ -382,23 +376,23 @@ address{
 .client-icon{
     width: 106px;
     height: 60px;
-    fill:#AFB1B8 ;
+    fill:currentColor ;
 }
 .client-link:hover,
 .client-link:focus{
     border: 1px solid var(--hover-color);
+    color: var(--hover-color);
 }
-.client-link:hover>.client-icon{
-    fill:var(--hover-color)
-}
+
 .client-link{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 170px;
-    padding: 16px 0;
+    height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    color: #AFB1B8;
     
 }
 .client-title{
@@ -500,8 +494,11 @@ color: var(--hover-color);
     gap:30px;
 
 }
-.goods-list-item:hover,
-.goods-list-item:focus{
+.goods-link{
+    display: block;
+}
+.goods-link:hover,
+.goods-link:focus{
     border: 1px solid #EEEEEE;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -509,6 +506,7 @@ color: var(--hover-color);
 .team-text-container{
     padding: 30px 0;
 }
+
 
 .goods-list-item{
    width: 370px;
@@ -525,6 +523,7 @@ color: var(--hover-color);
     line-height: 2;
     letter-spacing: 0.06em;
     margin-bottom: 10px;
+    color: var(--main-color);
    
 }
 
@@ -548,6 +547,7 @@ color: var(--hover-color);
 
 .footer{
     display: flex;
+    align-items: baseline;
 }
 .footer-right-title{
     font-family: 'Roboto';
@@ -562,7 +562,6 @@ color: var(--hover-color);
 }
 .footer-right{
     margin-left:70px;
-    padding-top:12px;
 }
 .footer-links{
     display: flex;
